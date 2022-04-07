@@ -161,11 +161,11 @@
 <p><img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220330233811934.png" alt="图 1"></p>
 <p>输入下面的代码，其中，yourname 更改为<font color=red>你的 GitHub 名字</font>，email部分更改为<font color=red>你的 GitHub注册邮箱</font>，回车确认</p>
 <blockquote>
-<p>git config –global user.name “yourname”<br>git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#x65;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#x65;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>“</p>
+<p>git config –global user.name “yourname”<br>git config –global user.email “<a href="mailto:&#101;&#109;&#97;&#105;&#x6c;&#x40;&#101;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#101;&#109;&#97;&#105;&#x6c;&#x40;&#101;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a>“</p>
 </blockquote>
 <p>而后输入下面的代码来创建ssh，要求同上，回车确认</p>
 <blockquote>
-<p>ssh-keygen -t rsa -C “<a href="mailto:&#x65;&#109;&#x61;&#x69;&#108;&#64;&#x79;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x65;&#109;&#x61;&#x69;&#108;&#64;&#x79;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a>“</p>
+<p>ssh-keygen -t rsa -C “<a href="mailto:&#101;&#109;&#97;&#105;&#x6c;&#64;&#x79;&#x6f;&#x75;&#x72;&#x65;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#101;&#109;&#97;&#105;&#x6c;&#64;&#x79;&#x6f;&#x75;&#x72;&#x65;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a>“</p>
 </blockquote>
 <p>它会返回一个路径，在该路径下你应该能找到两个文件</p>
 <blockquote>
@@ -179,7 +179,7 @@
 <p>在Key中填入公钥，title随便填即可，而后点击 add key</p>
 <p>在之前的 git bash 中输入以下代码进行检验</p>
 <blockquote>
-<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;</a></p>
 </blockquote>
 <p>提示 successfully 即为成功</p>
 <h4 id="勘误"><a href="#勘误" class="headerlink" title="! 勘误"></a>! 勘误</h4><p>完成上一步后，立即找得到下方的 <font color=#4fff6c>Repositories</font> 在右侧的<font color=#4fff6c>repository default branch</font> 处修改默认仓库位置为 <font color=red>master</font> ，Git Bash在执行Git init指令后默认使用master仓库，但是GitHub改版后默认为main 如果不修改Git Bash或GitHub里的仓库将导致严重的问题从而浪费时间。</p>
@@ -209,7 +209,7 @@
 <p>输入完后你应当在有颜色的一串字符上看到多了一个 <font color=#800080>master</font> </p>
 <p>链接远程仓库，输入如下代码，<font color=red>git@ github.com不用修改</font>,your name为你的用户名，repository name为你的仓库名字，应当也为你的用户名 ，不要忘了尾部的 .git <font color=red>【这一步是必要的！否则网页将推送失败】</font></p>
 <blockquote>
-<p>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:yourName&#x2F;repositor yname.git</p>
+<p>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;</a>:yourName&#x2F;repositor yname.git</p>
 </blockquote>
 <p>如果没有报错，就可以进行下一步</p>
 <h4 id="gt-安装Hexo"><a href="#gt-安装Hexo" class="headerlink" title="&gt;安装Hexo"></a>&gt;安装Hexo</h4><p>&lt;省略了仓库同步检验步骤，我们认为是没有必要的，需要的请在 <a target="_blank" rel="noopener" href="https://qingwu.top/post/49491.html">瑾知</a> 的Blog查看&gt;</p>
