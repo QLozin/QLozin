@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;zh-HK&quot;,&quot;zh-TW&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>搭建Blog指北 | QLozinの小窝</title><meta name="keywords" content="奇怪教程"><meta name="author" content="QLozin"><meta name="copyright" content="QLozin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="进行一个建的搭&gt;其他参考文件瑾知的文档  注：瑾知的文档成文仓促，存在些许错误，对于已经发现的，将在下文勘误 &gt;本篇主旨：该文章旨在提供一份帮助文档，不是完美的教程，内容直接转述于上面提到的文档，并重新对内容进行组织，以期降低阅读难度和更正错误。因此不再每一步骤提供完整的图片，如有需要请查阅上述文档。 &gt;前期准备&gt;拥有GitHub账号前往 Github 官网注册自己的账号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建Blog指北">
+<meta property="og:url" content="https://qlozin.github.io/QLozin/2022/04/07/2022-3-30-1/index.html">
+<meta property="og:site_name" content="QLozinの小窝">
+<meta property="og:description" content="进行一个建的搭&gt;其他参考文件瑾知的文档  注：瑾知的文档成文仓促，存在些许错误，对于已经发现的，将在下文勘误 &gt;本篇主旨：该文章旨在提供一份帮助文档，不是完美的教程，内容直接转述于上面提到的文档，并重新对内容进行组织，以期降低阅读难度和更正错误。因此不再每一步骤提供完整的图片，如有需要请查阅上述文档。 &gt;前期准备&gt;拥有GitHub账号前往 Github 官网注册自己的账号">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-04-07T12:18:48.744Z">
+<meta property="article:modified_time" content="2022-04-01T09:45:32.000Z">
+<meta property="article:author" content="QLozin">
+<meta property="article:tag" content="奇怪教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/QLozin/img/favicon.png"><link rel="canonical" href="https://qlozin.github.io/QLozin/2022/04/07/2022-3-30-1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/QLozin/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/QLozin/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '搭建Blog指北',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-01 17:45:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/QLozin/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/QLozin/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/QLozin/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/QLozin/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/QLozin/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/QLozin/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/QLozin/">QLozinの小窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/QLozin/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/QLozin/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/QLozin/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">搭建Blog指北</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-07T12:18:48.744Z" title="发表于 2022-04-07 20:18:48">2022-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-01T09:45:32.000Z" title="更新于 2022-04-01 17:45:32">2022-04-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="搭建Blog指北"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="进行一个建的搭"><a href="#进行一个建的搭" class="headerlink" title="进行一个建的搭"></a>进行一个建的搭</h2><h3 id="gt-其他参考文件"><a href="#gt-其他参考文件" class="headerlink" title="&gt;其他参考文件"></a>&gt;其他参考文件</h3><p><a target="_blank" rel="noopener" href="https://qingwu.top/post/49491.html">瑾知的文档</a> </p>
+<p>注：瑾知的文档成文仓促，存在些许错误，对于已经发现的，将在下文勘误</p>
+<h3 id="gt-本篇主旨："><a href="#gt-本篇主旨：" class="headerlink" title="&gt;本篇主旨："></a>&gt;本篇主旨：</h3><p>该文章旨在提供一份帮助文档，不是完美的教程，内容直接转述于上面提到的文档，并重新对内容进行组织，以期降低阅读难度和更正错误。因此不再每一步骤提供完整的图片，如有需要请查阅上述文档。</p>
+<h3 id="gt-前期准备"><a href="#gt-前期准备" class="headerlink" title="&gt;前期准备"></a>&gt;前期准备</h3><h4 id="gt-拥有GitHub账号"><a href="#gt-拥有GitHub账号" class="headerlink" title="&gt;拥有GitHub账号"></a>&gt;拥有GitHub账号</h4><p>前往 <a href="github.com">Github</a> 官网注册自己的账号</p>
+<p>Github因众所周知的原因，访问速度可能存在极大波动，请自行使用插件、加速方法、host等解决</p>
+<h4 id="gt-安装Git-Node-js"><a href="#gt-安装Git-Node-js" class="headerlink" title="&gt;安装Git Node.js"></a>&gt;安装Git Node.js</h4><p>去下载 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> </p>
+<p>直接点击 Download 选择适合你的操作系统即可</p>
+<p>安装时全选默认即可</p>
+<h4 id="gt-安装Node-js"><a href="#gt-安装Node-js" class="headerlink" title="&gt;安装Node.js"></a>&gt;安装Node.js</h4><p>去下载 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a> </p>
+<p>选择<font color=#ffcc> LTS</font>(Long Time Support) 版本</p>
+<h4 id="gt-安装Sublime-Text【可选步骤】"><a href="#gt-安装Sublime-Text【可选步骤】" class="headerlink" title="&gt;安装Sublime Text【可选步骤】"></a>&gt;安装Sublime Text【可选步骤】</h4><p>一个强大的文本代码编辑器，可以当做文本使用，也可以当做代码工具使用，当你认为不需要大动干戈使用VScode或者别的什么IDE对代码进行轻量化修改的时候可以用上它。推荐先使用官方试用版</p>
+<p>两个安装渠道：</p>
+<p><a target="_blank" rel="noopener" href="https://url94.ctfile.com/d/17401394-29687971-c1faff">学习版安装</a> <del>YPOJIE</del></p>
+<p><a target="_blank" rel="noopener" href="https://sublimetextcn.com/">官网试用版&#x2F;正式版</a> </p>
+<h3 id="gt-开始搭建"><a href="#gt-开始搭建" class="headerlink" title="&gt;开始搭建"></a>&gt;开始搭建</h3><h4 id="gt-建立密钥链接"><a href="#gt-建立密钥链接" class="headerlink" title="&gt;建立密钥链接"></a>&gt;建立密钥链接</h4><p>在你想要保存本地Blog的地方，新建一个文件，打开</p>
+<p>在<font color=red>该文件空白处</font>右键，点击 Git Bash Here 打开Git的控制面板</p>
+<p><img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220330233811934.png" alt="图 1"></p>
+<p>输入下面的代码，其中，yourname 更改为<font color=red>你的 GitHub 名字</font>，email部分更改为<font color=red>你的 GitHub注册邮箱</font>，回车确认</p>
+<blockquote>
+<p>git config –global user.name “yourname”<br>git config –global user.email “<a href="mailto:&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+</blockquote>
+<p>而后输入下面的代码来创建ssh，要求同上，回车确认</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “<a href="mailto:&#x65;&#x6d;&#97;&#x69;&#x6c;&#64;&#121;&#x6f;&#x75;&#x72;&#101;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x65;&#x6d;&#97;&#x69;&#x6c;&#64;&#121;&#x6f;&#x75;&#x72;&#101;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a>“</p>
+</blockquote>
+<p>它会返回一个路径，在该路径下你应该能找到两个文件</p>
+<blockquote>
+<p>id_rsa 私钥</p>
+<p>id_rsa.pub 公钥</p>
+</blockquote>
+<p>复制公钥中的内容，打开GitHub，点击你的头像，在 setting 中左侧侧边栏找到 SSH and GPG Keys </p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331105045750.png" alt="图 2" style="zoom: 50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331105106230.png" alt="图 3"></p>
+<p>在Key中填入公钥，title随便填即可，而后点击 add key</p>
+<p>在之前的 git bash 中输入以下代码进行检验</p>
+<blockquote>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a></p>
+</blockquote>
+<p>提示 successfully 即为成功</p>
+<h4 id="勘误"><a href="#勘误" class="headerlink" title="! 勘误"></a>! 勘误</h4><p>完成上一步后，立即找得到下方的 <font color=#4fff6c>Repositories</font> 在右侧的<font color=#4fff6c>repository default branch</font> 处修改默认仓库位置为 <font color=red>master</font> ，Git Bash在执行Git init指令后默认使用master仓库，但是GitHub改版后默认为main 如果不修改Git Bash或GitHub里的仓库将导致严重的问题从而浪费时间。</p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331105856158.png" alt="图 4" style="zoom:50%;" /> 
+
+<h4 id="gt-新建仓库"><a href="#gt-新建仓库" class="headerlink" title="&gt;新建仓库"></a>&gt;新建仓库</h4><p>在Github主页，新建一个仓库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220330233336435.png"> </p>
+<p>在 <font color=#ffcc>Repository name</font> 一栏填写你的GitHub的用户名，也就是 <font color=#ffcc>Owner</font> 显示的名字</p>
+<p>在下方 <font color=#ffcc>Initialize this repository with</font> 处勾选 <font color=#ffcc>Add a README file</font></p>
+<p>然后点击下方的 <font color=#ffcc>ICreate repository</font> 即可进入新建仓库</p>
+<h4 id="gt-建立Github-pages"><a href="#gt-建立Github-pages" class="headerlink" title="&gt;建立Github pages"></a>&gt;建立Github pages</h4><p>Github pages 要求必须存在分支且必须包含文件，按照教程做的话应当存在 master 分支 和 readme 文件</p>
+<p>在仓库中点击 <font color=#ffcc>setting</font></p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331112611793.png" alt="" style="zoom:50%;" />
+
+<p>在左侧边栏找到 <font color=ffcc>Pages</font> 将Github pages中 <font color=ffcc>Source</font>下方的None修改为master，并Save即可</p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331112854045.png" alt="图 5" style="zoom:50%;" /> 
+
+<p>设置完毕后应当于如下界面相似，Github pages会给你提供一个网址，请<font color=red>保留备用</font></p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331113008463.png" alt="" style="zoom:50%;" />
+
+<h4 id="gt-创建博客本地文件"><a href="#gt-创建博客本地文件" class="headerlink" title="&gt;创建博客本地文件"></a>&gt;创建博客本地文件</h4><p>博客需要有本地文件，请选择合适的地方新建一个</p>
+<p>右键新建文件夹内的空白处，打开 Git Bash</p>
+<p>输入指令</p>
+<blockquote>
+<p>git init</p>
+</blockquote>
+<p>输入完后你应当在有颜色的一串字符上看到多了一个 <font color=#800080>master</font> </p>
+<p>链接远程仓库，输入如下代码，<font color=red>git@ github.com不用修改</font>,your name为你的用户名，repository name为你的仓库名字，应当也为你的用户名 ，不要忘了尾部的 .git <font color=red>【这一步是必要的！否则网页将推送失败】</font></p>
+<blockquote>
+<p>git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;</a>:yourName&#x2F;repositor yname.git</p>
+</blockquote>
+<p>如果没有报错，就可以进行下一步</p>
+<h4 id="gt-安装Hexo"><a href="#gt-安装Hexo" class="headerlink" title="&gt;安装Hexo"></a>&gt;安装Hexo</h4><p>&lt;省略了仓库同步检验步骤，我们认为是没有必要的，需要的请在 <a target="_blank" rel="noopener" href="https://qingwu.top/post/49491.html">瑾知</a> 的Blog查看&gt;</p>
+<p>依然在博客本地文件处唤出 Git Bash ，以及<font color=red>删除</font>文件夹里的 .git 文件，如果没有，请打开系统的“显示隐藏文件”设置</p>
+<p>在Git Bash中输入以下代码开始安装，要一步一步来</p>
+<blockquote>
+<p>npm install -g hexo-cli    #安装Hexo<br>hexo init                  #初始化博客<br>hexo g                     #部署博客</p>
+</blockquote>
+<p><font color=red>安装过程中不会出现大段大段的以 error 开头的代码</font></p>
+<p>而后输入以下代码，并在浏览器网址处填写第二条代码检查安装情况</p>
+<blockquote>
+<p>hexo s<br>localhost:4000&#x2F;<br>hexo s -p 5000</p>
+</blockquote>
+<p>如果出现可以访问且尚且能看的网页，则安装成功</p>
+<p>提示端口占用请在Git Bash输入第三行代码重新访问，但 4000 改为 5000</p>
+<h4 id="gt-部署Hexo"><a href="#gt-部署Hexo" class="headerlink" title="&gt;部署Hexo"></a>&gt;部署Hexo</h4><p>回到博客本地文件夹，使用Sublime Text打开 <code>_config.yml</code>文件，或者使用记事本、VScode打开</p>
+<p>拉到文件最底部，粘贴进如下代码<font color=red>注意：</font>原文件有一小段已经生成好的重复代码，务必删除，应该是</p>
+<p><code>deploy: type:</code>这段是已经有的，删除掉</p>
+<p>yourname 填写你的用户名 repositoryname 应该跟你的用户名保持一致（如果你按照教程走的话）</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com:yourName/repositoryname.git">https://github.com:yourName/repositoryname.git</a>  #此处填写你的仓库地址<br>  branch: master</p>
+</blockquote>
+<p>并在该文件上方找到<font color=ffcc> url: example </font>应该在 16 行，如果你用SubText查看的话 ，它会填一个 example 网址，请将它替换为你保存的 Github pages的网址</p>
+<h4 id="gt-同步Hexo"><a href="#gt-同步Hexo" class="headerlink" title="&gt;同步Hexo"></a>&gt;同步Hexo</h4><p>输入以下指令，安装Hexo部署插件，并部署Hexo，第一条指令在新文件夹都必须运行</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save<br>hexo clean   #清除缓存文件 db.json 和已生成的静态文件 public<br>hexo g       #生成网站静态文件到默认设置的 public 文件夹(hexo generate的缩写)<br>hexo d       #生成网站静态文件，并部署到设定的仓库(hexo deploy的缩写)</p>
+</blockquote>
+<p>指令执行完成后在你的Github仓库里刷新，看看更新时间，更新时间应该在几分钟之内</p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331114116370.png" alt="" style="zoom:50%;" />
+
+<p>而后请访问你的Github Pages地址，出现的内容应当和 Localhost:4000 的地址保持一致</p>
+<p><font color=red>！</font>如果发现执行Hexo d中弹出各种 css 错误，请再检查你的 url 地址填写是否正确，网络是否顺畅</p>
+<h4 id="gt-安装Hexo主题"><a href="#gt-安装Hexo主题" class="headerlink" title="&gt;安装Hexo主题"></a>&gt;安装Hexo主题</h4><p>在Github中全站搜索 <code>Hexo theme</code>可以发现各种适配的主题，具体的安装步骤在此不做赘述，每个主题的github页面都有安装介绍。在此介绍几个不错的主题。推荐使用Butterfly，功能非常多。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">Next theme</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly theme</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid theme</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bollnh/hexo-theme-material">Material theme</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis">Volantis theme</a></p>
+<p>其中 Material 是本站正在使用的主题<code>截止发文时</code>，瑾知网站使用的是 Butterfly主题（原为fluid）</p>
+<p>新安装的主题需要自行创建<code>关于页 404页</code>等，按照主题所在的Github项目要求中进行</p>
+<p>本篇也不做赘述，请自行查阅</p>
+<p>生成完所需的页面后，执行以下代码，将页面推至Github上</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo s      #在本地查看主题是否被安装安装 【可省略，如果你认为没有问题的话】<br>hexo d      #确认无误后推送到GitHub</p>
+</blockquote>
+<h3 id="gt-最后的检查"><a href="#gt-最后的检查" class="headerlink" title="&gt;最后的检查"></a>&gt;最后的检查</h3><p>推完页面后查看项目的修改时间，也应该在几分钟内，由于GitHub的一些限制，如果发现一段时间仍然没有更新项目，请多等候一会儿，不要多次推送页面。Github的响应和更新需要一些时间</p>
+<p>当发现项目已经更新后，进入已经保留好的Github pages页面，页面内容<font color=red>应当</font>与你所在本地查看到的主题内容一直，而不再是没有安装主题时简陋的样子</p>
+<h3 id="gt-关于自定义域名："><a href="#gt-关于自定义域名：" class="headerlink" title="&gt;关于自定义域名："></a>&gt;关于自定义域名：</h3><p>如果你想让你的网站访问的网址变得更容易被记住，可以购买一个更简单的域名，可以购买腾讯或者阿里的域名，或者在你认为合适的地方购买，一般为 60元&#x2F;年 ，但是每个域名都不一样，可能多也可能少。</p>
+<p>具体的Github域名绑定方法请自行查阅教程，在此不做<a href="%E5%9B%A0%E4%B8%BA%E7%BF%BB%E4%BA%86%E5%A4%A7%E8%BD%A6%E4%BA%86">^赘述</a></p>
+<p>简述遇到的问题：</p>
+<p>■必须先配置好DNS再将域名绑定至Github，否则会导致严重的解析失败问题，DNS的配置方法此处不进行说明</p>
+<p>■在Github项目的setting界面中可以在github pages的 Custom domain中手动设置</p>
+<img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331121343949.png" alt="" style="zoom: 80%;" />
+
+<p>■设置完域名并等待Github check DNS后，在下方打开https访问，注意，DNS扩散需要时间，刚刚绑定的域名可能在一定时间内存在访问问题</p>
+<p><img src="https://cdn.jsdelivr.net/gh/QLozin/Image/img/image-20220331121449745.png"></p>
+<p>■每次推送完网页后设置里的 domain 会被刷掉，需要在本地blog的source文件内添加一个文本，名为CANME，其中写入你的域名，保存后删除后缀 .txt，再进行推送，就能自动设置domain</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">QLozin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://qlozin.github.io/QLozin/2022/04/07/2022-3-30-1/">https://qlozin.github.io/QLozin/2022/04/07/2022-3-30-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://qlozin.github.io/QLozin" target="_blank">QLozinの小窝</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/QLozin/tags/%E5%A5%87%E6%80%AA%E6%95%99%E7%A8%8B/">奇怪教程</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/QLozin/2022/04/07/Hello%20World/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/QLozin/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HelloWorld</div></div></a></div><div class="next-post pull-right"><a href="/QLozin/2022/03/30/HellowWorld2/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/QLozin/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">TEST 2</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/QLozin/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">QLozin</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/QLozin/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/QLozin/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/QLozin/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%BB%BA%E7%9A%84%E6%90%AD"><span class="toc-number">1.</span> <span class="toc-text">进行一个建的搭</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text">&gt;其他参考文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E6%9C%AC%E7%AF%87%E4%B8%BB%E6%97%A8%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">&gt;本篇主旨：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">1.3.</span> <span class="toc-text">&gt;前期准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E6%8B%A5%E6%9C%89GitHub%E8%B4%A6%E5%8F%B7"><span class="toc-number">1.3.1.</span> <span class="toc-text">&gt;拥有GitHub账号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%AE%89%E8%A3%85Git-Node-js"><span class="toc-number">1.3.2.</span> <span class="toc-text">&gt;安装Git Node.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%AE%89%E8%A3%85Node-js"><span class="toc-number">1.3.3.</span> <span class="toc-text">&gt;安装Node.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%AE%89%E8%A3%85Sublime-Text%E3%80%90%E5%8F%AF%E9%80%89%E6%AD%A5%E9%AA%A4%E3%80%91"><span class="toc-number">1.3.4.</span> <span class="toc-text">&gt;安装Sublime Text【可选步骤】</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA"><span class="toc-number">1.4.</span> <span class="toc-text">&gt;开始搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%BB%BA%E7%AB%8B%E5%AF%86%E9%92%A5%E9%93%BE%E6%8E%A5"><span class="toc-number">1.4.1.</span> <span class="toc-text">&gt;建立密钥链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8B%98%E8%AF%AF"><span class="toc-number">1.4.2.</span> <span class="toc-text">! 勘误</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">1.4.3.</span> <span class="toc-text">&gt;新建仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%BB%BA%E7%AB%8BGithub-pages"><span class="toc-number">1.4.4.</span> <span class="toc-text">&gt;建立Github pages</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.5.</span> <span class="toc-text">&gt;创建博客本地文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">1.4.6.</span> <span class="toc-text">&gt;安装Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E9%83%A8%E7%BD%B2Hexo"><span class="toc-number">1.4.7.</span> <span class="toc-text">&gt;部署Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%90%8C%E6%AD%A5Hexo"><span class="toc-number">1.4.8.</span> <span class="toc-text">&gt;同步Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gt-%E5%AE%89%E8%A3%85Hexo%E4%B8%BB%E9%A2%98"><span class="toc-number">1.4.9.</span> <span class="toc-text">&gt;安装Hexo主题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E6%9C%80%E5%90%8E%E7%9A%84%E6%A3%80%E6%9F%A5"><span class="toc-number">1.5.</span> <span class="toc-text">&gt;最后的检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E5%85%B3%E4%BA%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%EF%BC%9A"><span class="toc-number">1.6.</span> <span class="toc-text">&gt;关于自定义域名：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/QLozin/2022/04/07/HelloWorld3/" title="Test2"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/QLozin/img/404.jpg'" alt="Test2"/></a><div class="content"><a class="title" href="/QLozin/2022/04/07/HelloWorld3/" title="Test2">Test2</a><time datetime="2022-04-07T12:18:48.758Z" title="发表于 2022-04-07 20:18:48">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QLozin/2022/04/07/Hello%20World/" title="HelloWorld"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/QLozin/img/404.jpg'" alt="HelloWorld"/></a><div class="content"><a class="title" href="/QLozin/2022/04/07/Hello%20World/" title="HelloWorld">HelloWorld</a><time datetime="2022-04-07T12:18:48.750Z" title="发表于 2022-04-07 20:18:48">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QLozin/2022/04/07/2022-3-30-1/" title="搭建Blog指北"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/QLozin/img/404.jpg'" alt="搭建Blog指北"/></a><div class="content"><a class="title" href="/QLozin/2022/04/07/2022-3-30-1/" title="搭建Blog指北">搭建Blog指北</a><time datetime="2022-04-07T12:18:48.744Z" title="发表于 2022-04-07 20:18:48">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QLozin/2022/03/30/HellowWorld2/" title="TEST 2"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/QLozin/img/404.jpg'" alt="TEST 2"/></a><div class="content"><a class="title" href="/QLozin/2022/03/30/HellowWorld2/" title="TEST 2">TEST 2</a><time datetime="2022-03-30T12:50:00.000Z" title="发表于 2022-03-30 20:50:00">2022-03-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By QLozin</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/QLozin/js/utils.js"></script><script src="/QLozin/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
