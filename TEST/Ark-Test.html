@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arknights Test</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/roboto-mono" type="text/css"/> 
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/noto-sans" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/sometype-mono" type="text/css"/> 
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/noto-sans-condensed" type="text/css"/>
+    <!-- /*引入外部链接，上为引入外部字库以供使用，rel和media目前认为是一种格式，暂不明确用途*/ -->
+    <style>
+        .demo{
+            color:none;
+            position: fixed;
+            /*position用来指示位置，为static时top right等定位指令无效*/
+            top:0px;left: 0;  
+            /*
+            2022/2/26/22:00 top指图片到达其外元素之边距，取0时比取-10时上方白边更多，
+            且position不能使用 static，实践证明-22比auto更好
+            2022/2/26/ 22:57 我们发现一个事实：在唯一一个应用demo样式的代码中
+            如果使用<h1></h1>则 top取 -22 能差不多看不出白边，如果使用<dive></dive>则用0即可掩盖白边
+            鉴于 h1 和 dive 的深层次区别尚不明确，在此不再继续考究
+            */
+            width: 100%;height: 100%; /*width、height表示图片宽、长的缩放比例，>100%时为放大*/
+            min-width: 1000px; /*似乎限定了图片的最小宽度*/
+            z-index: -10;   /*似乎z轴是垂直于屏幕面向外侧的，当Z为0时将覆盖某些图片*/
+            zoom: 1;/*不知道有什么用，似乎是适配浏览器如IE之类的设置*/
+            background-color: #ffff;/*定义背景板颜色，当下方获取图片出现问题时显示的颜色*/
+            /* background:url(https://p.sda1.dev/5/d6862ada62006a785ea1137103095a87/Pic001.jpg); */
+            /*从一条URL链接中获得一张合适的色图作为背景,似乎为固定写法*/
+            /* background:url(https://i0.hdslb.com/bfs/article/adc141bf20e731f1e7ec0d59345e725591a7db9b.jpg@1320w_740h.webp) */
+            /* background-image:url(https://p.sda1.dev/5/16e604247cc602d982abb227d0cfb0ad/Pic002.jpg); */
+            background-image:url("https://p.sda1.dev/5/35948bf9623a6de3e97ddc3f3d313609/Pic004.jpg");
+            /*你可能根本没发现这个地方藏着一个隐藏的背景图，嘻嘻*/
+            /*background-img 与 background 似乎效果相同，且img优先级更高，或者说在它的上层*/
+            background-repeat: no-repeat;
+            /*定义背景的重复方式，即当背景图无法铺满背景时重复多张背景图使之填满背景
+            repeat -x 沿着水平重复 repeat 完全重复 space 四周间隔重复 round 环绕重复
+            参考链接：https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-repeat
+            */
+            background-size: cover;
+            /*定义背景图片的覆盖样式
+            cover为缩放覆盖，即当背景图原大小不足以铺满背景时，使用缩放使之适应背景板
+            同时也可以限制背景图本身的大小，使用 30%将强制使背景图缩小至30%，为了铺满背景板
+            系统将自动以环绕重复的方式铺满背景板，除非加上 No repeat 禁止重复
+            */
+            -webkit-background-size:cover;
+            -o-background-size:cover;
+            /*前缀 -webkit-似乎是一种试做型性质的玩意儿，考虑到代码主题与上一条几乎一样
+            姑且认为是一种适配浏览器的某种方式？ ——MDN未查到相关资料
+            */
+            background-position: center 0; 
+            /*决定背景图中心的初始位置，初始位置影响cover 缩放的效果
+            有top left center 以及更精确的数值选择
+            */
+        }
+        .copy-container{
+            color: rgb(255, 0, 0);
+            font-family:'roboto-mono','noto-sans','sometype-mono';
+            /*引用字体样式，在线字体样式要从head处用link引入*/
+            font-size: 24px;
+            font-weight: bold;
+            /*由于中文字体样式还不够好看，手动增加字重*/
+            display: block;
+            float: none;
+            /*float设定块沿容器的左侧还是右侧放置，且允许文本和内容环绕它，none是默认靠左侧*/
+        }
+        .center-xy{
+            top:10%;
+            left: 20%;
+            right: 20%;
+            position: absolute;
+            padding-bottom: 5%;
+            text-align: center;
+            padding: 0;
+        }
+        .FuckMargin{
+            margin-top: 0;
+            margin-bottom: 0;
+        /*奇怪的样式名，因为某些愚蠢的机制激怒了编者*/
+        }
+        .buttom{
+            color:red
+            /*按钮因为技术力不够，做不出来，笑*/
+        }
+        .logo{
+            margin-left: 0;
+            display: block;
+        }
+        /*这个Logo样式实际上屁用没有*/
+        .SmallPic{
+            position: absolute;
+            left:0% ;
+            top: 1080px;
+            display: block;
+            float: none;
+        }
+        /*不知道怎么设置图片位于左下角，如果使用 margin是无效的，使用bottom 0 则在放大缩小时会发生位移……*/
+    </style>
+</head>
+<body>
+    <dive class="demo"></dive>
+    <dive class="container">
+    <dive class="SmallPic">
+        <img src="https://p.sda1.dev/5/f633958974d9aeeb86cc98a2dc7c8db3/Pic003.png" alt="这里应该有图片" width="25%" height="25%">
+    </dive>
+        <dive class="copy-container center-xy">
+            <dive class="logo">
+                <image src="https://p.sda1.dev/5/85229573b3e7b0531341cd257d1b21b6/Pic005-圆角.png" alt="此处应该有图片" height="25%"width="25%">
+                    <!-- /*图片后方使用 width和htight 来强制缩放图片大小*/ -->
+                </image>
+            </dive>
+            <br>
+            <h1>Arknights—年</h1>
+            <p class="FuckMargin">啊~好饿啊</p>
+            <p class="FuckMargin">啊~好闲啊</p>
+            <p class="FuckMargin">博士，你吃了没？</p>
+            <p class="FuckMargin">欸，不要啦</p>
+            <p class="FuckMargin">我的身体内部，可是一千四百度哦</p>
+            <br>
+            <ul>
+                <li><button class="buttom">
+                    <a href="https://ak.hypergryph.com/">Doctor?</a>
+                </button></li>
+                <li>
+                    <button class="buttom">
+                        <a href="https://zh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F:%E5%B9%B4">
+                            萌百:年 
+                        </a>
+                    </button>
+                </li>
+            </ul>
+        </dive>
+    </dive>
+    </body>
+</html>

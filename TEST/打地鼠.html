@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=onclick="clicke()".0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../website/css/打地鼠.css">
+<style>
+    .remaind{
+        color: none;
+    }
+</style>
+</head>
+<body>
+    <dive class="demo">
+        <div class="center">
+            <button onclick="clicke()">你好</button>
+            <honclick="clicke()" id="score">0</honclick="clicke()">
+            <p>————————————————————————————————————————————————————————————</p>
+            <div>
+                <dive class="index">
+                    <dive class="img">
+                        <image id="0" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="1" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="2" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="3" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="4" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="5" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="6" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="7" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                        <image id="8" onclick="clicke()" src="../website/media/NEKO cry.jpg"></image>
+                    </dive>
+                </dive>
+            </div>
+        </div>
+    </dive>
+</body>
+<link rel="stylesheet" href="../website/css/打地鼠.css"/>
+<script type="text/javascript" src="../website/js/打地鼠.js" ></script>
+<script>
+i = 0
+var ima_change = document.getElementById(i);
+img_list = ["../website/media/NEKO LOL.png","../website/media/NEKO cry.jpg"];
+var CanClick = false;
+function clicke(){
+    var juge = $(i);
+}
+function reset(){
+    ima_change.src=img_list[1]
+}
+function time(){
+    i = Math.floor(Math.random()*9)+1;
+    var ima_change = document.getElementById(i);
+    ima_change.src = img_list[0]
+    setTimeout(reset(),2000);
+    console.log('运行一次')
+}
+
+setInterval(()=>{
+    i = Math.floor(Math.random()*9)+1;
+    var ima_change = document.getElementById(i);
+    ima_change.src = img_list[0]
+    setTimeout(function(){
+        var ima_change = document.getElementById(i);
+        ima_change.src = img_list[1]
+    },500)
+},1200);
+</script>
+</html>
